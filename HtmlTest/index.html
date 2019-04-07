@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THis is a Test file</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+    <div class="container">
+        <div class="jumbotron">
+            <button id="button" class="btn btn-primary" data-toggle="collapse">Button</button>
+            <p id="results" style="display: none;">aaa</p>
+            <script>
+                $("button").click(function() {
+                    $("p").toggle()
+                })
+            </script>
+
+        </div>
+    </div>
+
+</body>
+</html>
