@@ -37,8 +37,8 @@ class App extends Component {
     }
 
     //submit the update data to the parent state
-    handleSubmit = characters => {
-        this.setState({characters: [...this.state.characters, characters]})
+    handleSubmit = (name, job) => {
+        this.setState({name: name, job: job})
     }
 
 
@@ -73,7 +73,7 @@ class App extends Component {
             <div className="container">
                 <Table characterData={this.state.characters} removeCharacter={this.removeCharacter} />
                 <Form handleSubmit={this.handleSubmit} />
-                <JokeAPI />
+                <JokeAPI name={this.state.name} job={this.state.job}/>
             </div>
         )
     }

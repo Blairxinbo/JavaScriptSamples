@@ -6,15 +6,18 @@ class JokeAPI extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            name: props.name,
+            job: props.job,
             error: null,
             isLoaded: false,
             values: []
         };
+        console.log(props);
     }
 
     componentDidMount() {
         const data = {first: 'John', second: 'Doe'};
-        fetch(`http://api.icndb.com/jokes/random?firstName=${encodeURIComponent(data.first)}&amp;lastName=${encodeURIComponent(data.second)}`,{
+        fetch(`http://api.icndb.com/jokes/random?firstName=${encodeURIComponent(this.state.name)}&amp;lastName=${encodeURIComponent(this.state.job)}`,{
                 method: "GET",
         }).then(res => res.json())
             .then(
