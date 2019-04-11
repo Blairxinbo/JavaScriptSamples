@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+</head>
+<body>
+	<canvas id="canvas" width="200" height="200"></canvas>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+
+		// ctx.fillStyle = "Lightpink";
+		// ctx.fillRect(50,0,50,50);
+		// ctx.fillStyle = "LightSeaGreen";
+		// ctx.fillRect(70,50,10,20);
+		// ctx.fillStyle = "LightSteelBlue";
+		// ctx.fillRect(0,70,150,10);
+		// ctx.fillRect(40,80,70,70);
+		// ctx.fillRect(40,150,10,50);
+		// ctx.fillRect(100,150,10,50);
+
+		// ctx.lineWidth = 4;
+		// ctx.strokeRect(30,10,20,20);
+		// ctx.strokeStyle = "Turquoise";
+		// ctx.lineWidth = 4;
+		// ctx.beginPath();
+		// ctx.moveTo(40,32);
+		// ctx.lineTo(40,80);
+		// ctx.moveTo(20,40);
+		// ctx.lineTo(40,50);
+		// ctx.moveTo(60,40);
+		// ctx.lineTo(40,50);
+		// ctx.moveTo(40,80);
+		// ctx.lineTo(20,120);
+		// ctx.moveTo(40,80);
+		// ctx.lineTo(60,120);
+		// ctx.stroke();
+
+		// ctx.fillStyle = "SkyBlue";
+		// ctx.beginPath();
+		// ctx.moveTo(100,100);
+		// ctx.lineTo(100,60);
+		// ctx.lineTo(130,30);
+		// ctx.lineTo(160,60);
+		// ctx.lineTo(160,100);
+		// ctx.lineTo(100,100);
+		// ctx.fill();
+
+		// ctx.lineWidth = 2
+		// ctx.strokeStyle = "Green"
+
+		// ctx.beginPath();
+		// ctx.arc(50,50,20,0,Math.PI/2,false);
+		// ctx.stroke();
+
+		// ctx.beginPath();
+		// ctx.arc(100,50,20,0,Math.PI,false);
+		// ctx.stroke();
+
+		// ctx.beginPath()
+		// ctx.arc(150,50,20,0,Math.PI*2,false)
+		// ctx.stroke()
+
+		var circle = function(x, y, radius, fillCircle) {
+			ctx.beginPath()
+			ctx.arc(x, y, radius, 0, Math.PI * 2, false)
+			if(fillCircle) {
+				ctx.fill()
+			} else {
+				ctx.stroke()
+			}
+			
+		}
+		ctx.lineWidth = 4
+		ctx.strokeStyle = "Black"
+		circle(100,100,20,false)
+
+		ctx.strokeStyle = "Black"
+		circle(101,150,30,false)
+
+		ctx.fillStyle = "Orange"
+		circle(99,100,5,true)
+
+		ctx.fillStyle = "Black"
+		circle(95,95,2,true)
+
+		ctx.fillStyle = "Black"
+		circle(103,95,2,true)
+
+		ctx.fillStyle = "Black"
+		circle(100,135,5,true)
+
+		ctx.fillStyle = "Black"
+		circle(100,148,5,true)
+
+		ctx.fillStyle = "Black"
+		circle(100,161,5,true)
+
+	</script>
+</body>
+</html>
+
+
