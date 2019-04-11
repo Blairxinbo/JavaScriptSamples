@@ -35,14 +35,19 @@ import TableBody from "./TableBody";
 //     }
 // }
 
+//When we use ES6 components to make a Table
 class Table extends Component {
     render() {
+        const { characterData, removeCharacter } = this.props /*React handle data using properties*/
+
         return (
             <table>
                 <TableHeader />
-                <TableBody />
+                <TableBody characterData={characterData} removeCharacter={removeCharacter} />
             </table>
         );
     }
 }
+
+
 export default Table
